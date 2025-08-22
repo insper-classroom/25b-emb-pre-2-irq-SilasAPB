@@ -31,6 +31,8 @@
         "workbench.action.tasks.runTask"
     ],
     "files.associations": {
-        "stdlib.h": "c"
+        "*.nasm": "assembly",
+        "stdlib.h": "c",
+        "random": "c"
     }
 }
