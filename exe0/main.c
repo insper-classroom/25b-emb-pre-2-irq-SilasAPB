@@ -9,7 +9,6 @@
 const int BTN_PIN_R = 28;
 
 volatile int btn_flag;
-int capture_flag = 0;
 
 void btn_callback(uint gpio, uint32_t events) {
   if (events == 0x4) { // fall e
@@ -27,12 +26,7 @@ int main() {
 
   while (1) {
     if (btn_flag) {
-      capture_flag = 1;
       btn_flag = 0;
     }
-
-    if (capture_flag) {
-    }
-
   }
 }
