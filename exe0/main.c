@@ -8,21 +8,10 @@
 
 const int BTN_PIN_R = 28;
 
-int btn_flag;
+volatile int btn_flag;
 
 void btn_callback(uint gpio, uint32_t events) {
-  if (events == 0x4) { // fall edge
-
-    printf("btn pressed \n");
-
-    while (!gpio_get(BTN_PIN_R)) {
-      sleep_ms(1);
-    }
-
-
-    printf("btn released \n");
-
-    sleep_ms(1);
+  if (events == 0x4) { // fall e
     btn_flag = 1;
   }
 }
