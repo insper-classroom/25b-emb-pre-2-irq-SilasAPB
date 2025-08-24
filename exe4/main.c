@@ -10,9 +10,9 @@ volatile int g_status = 0;
 
 void btn_callback(uint gpio, uint32_t events) {
     if (events == 0x4) { // fall edge
-     if (gpio == BTN_PIN[0]) {
+        if (gpio == BTN_PIN[0]) {
             r_status = 1;
-
+        }
     } else if (events == 0x8) { // rise edge
         if (gpio == BTN_PIN[1]) {
             g_status = 1;
